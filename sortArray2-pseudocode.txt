@@ -1,0 +1,25 @@
+Function sort (*array, size, descending) {
+    newarray <- array
+    IF !descending THEN:
+        FOR i <- 1; i < array.length; i++ DO:
+            j <- i
+            WHILE j > 0 && array[j] < array[j-1] DO:
+                higindex <- array[j]
+                lowindex <- array[j - 1]
+                array[j] <- lowindex
+                array[j - 1] <- higindex
+                j--
+            ENDWHILE
+        ENDFOR
+    ELSE THEN:
+        FOR i <- 1; i < array.length; i++ DO:
+            j <- i
+            WHILE j > 0 && array[j] > array[j-1] DO:
+                higindex <- array[j]
+                lowindex <- array[j - 1]
+                array[j] <- lowindex
+                array[j - 1] <- higindex
+                j--
+            ENDWHILE
+        ENDFOR
+    ENDIF

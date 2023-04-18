@@ -1,0 +1,24 @@
+Function sort (*array, size, descending) {
+    IF !descending THEN:
+        FOR item1 in array DO:
+            FOR item2 in array DO:
+                lowindex <- item1
+                higindex <- item2
+                IF loindex > hiindex DO:
+                    item1 <- higindex;
+                    item2 <- lowindex;
+                ENDIF
+            ENDFOR
+        ENDFOR
+    ELSE THEN:
+        FOR item1 in array DO:
+            FOR item2 in array DO:
+                lowindex <- item1
+                higindex <- item2
+                IF loindex < hiindex DO:
+                    item1 <- higindex;
+                    item2 <- lowindex;
+                ENDIF
+            ENDFOR
+        ENDFOR
+    ENDIF
